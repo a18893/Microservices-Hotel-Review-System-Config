@@ -1,1 +1,23 @@
+spring:
+  application:
+    name: CONFIG-SERVER-DEV
 
+eureka:
+  instance:
+      prefer-ip-address: true
+  client:
+    fetch-registry: true 
+    register-with-eureka: true   
+    service-url:
+      defaultZone:  http://localhost:8761/eureka   
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health
+
+info:
+  app:
+    name: "CONFIG-SERVER"
+    description: "Central configuration for hotel review system"
+    version: "1.0.0"
